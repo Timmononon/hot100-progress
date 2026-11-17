@@ -1,4 +1,9 @@
 {
   "version": 1,
-  "problems": {}
+  "problems": {
+    "15": {
+      "status": "已通过",
+      "updatedAt": "2026-11-17"
+    }
+  }
 }
