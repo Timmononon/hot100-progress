@@ -34,5 +34,6 @@ while head is not prev:
         break
     head = head.next
     prev = prev.next
+    
 if head is prev:
     print(True)
