@@ -29,3 +29,10 @@ while slow:
     slow = nextnode
 
 while head is not prev:
+    if head.val != prev.val:
+        print(False)
+        break
+    head = head.next
+    prev = prev.next
+if head is prev:
+    print(True)
