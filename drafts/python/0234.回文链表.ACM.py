@@ -12,3 +12,4 @@ for x in nums:
     node = ListNode(x)
     tail.next = node
     tail = node
+head = head.next
