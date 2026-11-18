@@ -13,3 +13,10 @@ for x in nums:
     tail.next = node
     tail = node
 head = head.next
+
+fast = head
+slow = head
+
+while fast is not None and fast.next is not None:
+    slow = slow.next
+    fast = fast.next.next
