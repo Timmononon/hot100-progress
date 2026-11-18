@@ -20,3 +20,12 @@ slow = head
 while fast is not None and fast.next is not None:
     slow = slow.next
     fast = fast.next.next
+
+prev = None
+while slow:
+    nextnode = slow.next
+    slow.next = prev
+    prev = slow
+    slow = nextnode
+
+while head is not prev:
