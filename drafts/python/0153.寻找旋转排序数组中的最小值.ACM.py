@@ -1,14 +1,15 @@
 n = int(input())
-nums = list(map(int,input().split()))
+nums = list(map(int, input().split()))
 
 l = 0
 r = n - 1
 
 while l < r:
-    mid = (l + r)//2
-    if nums[mid] <= nums[l]:
-        r = mid
-    else:
-        l = mid + 1
+    mid = (l + r) // 2
 
-print(nums[r])
+    if nums[mid] > nums[r]:
+        l = mid + 1
+    else:
+        r = mid
+
+print(nums[l])
