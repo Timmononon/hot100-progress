@@ -1,13 +1,14 @@
 n = int(input())
 nums = list(map(int,input().split()))
 
-left = 0
-right = n - 1
-res = nums[0]
+l = 0
+r = n - 1
+
 while left < right:
-    if nums[right] < nums[left]:
-        res = nums[right]
-        right -=1
+    mid = (l + r)//2
+    if nums[mid] < nums[l]:
+        r = mid
     else:
-        break
-print(res)
+        l = mid + 1
+
+print(nums[r])
