@@ -2,6 +2,7 @@ n = int(input())
 
 dp = [float("inf")] * (n+1)
 base = 1
+dp[0] = 0
 while base * base <= n:
     sq = base * base
     for i in range(sq,n+1):
