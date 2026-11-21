@@ -22,7 +22,7 @@ def dfs(start):
             path.append(s[start:end+1])
             dfs(end+1)
             path.pop()
-
+dfs(0)
 print(len(res))
 for row in res:
     print(len(row))
