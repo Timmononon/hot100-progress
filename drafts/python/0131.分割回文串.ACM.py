@@ -20,3 +20,7 @@ def dfs(start):
     for end in range(start,n):
         if check(start,end):
             path.append(s[start:end+1])
+            dfs(end+1)
+            path.pop()
+
+print(len(res))
