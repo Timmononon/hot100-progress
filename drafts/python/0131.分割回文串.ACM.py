@@ -13,3 +13,4 @@ def check(left,right):
     return True
 
 def dfs(start):
+    if start
