@@ -13,4 +13,10 @@ def check(left,right):
     return True
 
 def dfs(start):
-    if start
+    if start == n:
+        res.append(path[:])
+        return
+
+    for end in range(start,n):
+        if check(start,end):
+            path.append(s[start:end+1])
