@@ -24,3 +24,7 @@ def dfs(start):
             path.pop()
 
 print(len(res))
+for row in res:
+    print(len(row))
+    for ch in row:
+        print(ch)
