@@ -1,4 +1,4 @@
-from collection import deque
+from collections import deque
 r = int(input())
 matrix = []
 for _ in range(r):
@@ -8,9 +8,31 @@ for _ in range(r):
 n = len(matrix[0])
 queue = deque()
 fresh = 0
-for i in range(m):
+for i in range(r):
     for j in range(n):
         if matrix[i][j] == 2:
             queue.append((i,j))
         elif matrix[i][j] == 1:
             fresh += 1
+
+minites = 0
+directions = [(-1,0),(1,0),(0,-1),(0,1)]
+while queue and fresh > 0:
+    size = len(queue)
+
+    for _ in range(size):
+        i,j = queue.popleft()
+
+        for di,dj in directions:
+            ni = i+di
+            nj = j+dj
+            if 0<=ni<r and 0<=nj<n and matrix[ni][nj] == 1:
+                matrix[ni][nj] = 2
+                queue.append((ni,nj))
+                fresh -= 1
+    minites += 1
+    
+if fresh == 0:
+    print(minites)
+else:
+    print(-1)
