@@ -21,3 +21,4 @@ for i in range(n-2):
             while left<right and nums[left] == nums[left-1]:
                 left+=1
             while left<right and nums[right]==nums[right+1]:
+                right-=1
