@@ -2,5 +2,15 @@ n = int(input())
 seen = {}
 for _ in range(n):
     word = input()
-    if word not in seen:
-        seen[word]
+    key = "".join(sorted(word))
+    if key not in seen:
+        seen[key] = []
+    seen[key].append(word)
+
+print(len(seen))
+res = []
+for k,v in seen.items():
+    res.append(v)
+    print(len(res))
+    for r in res:
+        print(r)
