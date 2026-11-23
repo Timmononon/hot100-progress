@@ -8,7 +8,6 @@ for _ in range(n):
     seen[key].append(word)
 
 print(len(seen))
-res = []
 for v in seen.values():
     res.append(v)
     print(len(res))
