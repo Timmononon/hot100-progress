@@ -9,5 +9,4 @@ for _ in range(n):
 
 print(len(seen))
 for v in seen.values():
-    res.append(v)
-    print(len(res))
+    print(len(v))
