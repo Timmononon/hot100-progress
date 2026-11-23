@@ -9,8 +9,9 @@ for _ in range(n):
 
 print(len(seen))
 res = []
-for k,v in seen.items():
+for v in seen.values():
     res.append(v)
     print(len(res))
     for r in res:
         print(r)
+    res = []
