@@ -10,3 +10,5 @@ for _ in range(n):
 print(len(seen))
 for v in seen.values():
     print(len(v))
+    for word in v:
+        print(word)
