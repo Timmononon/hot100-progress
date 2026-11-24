@@ -6,3 +6,7 @@ for _ in range(q-1):
     parts = input().split()
     key = int(parts[1])
     if parts[0] == "get":
+        if key not in cache:
+            print("null")
+        else:
+            print(cache[key])
