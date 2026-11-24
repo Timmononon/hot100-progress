@@ -4,7 +4,7 @@ class ListNode:
         self.next = next
 
 def merge_sort(node):
-
+    
 n = int(input())
 nums = list(map(int , input().split()))
 
