@@ -25,3 +25,10 @@ while slow:
     slow.next = prev
     prev = slow
     slow = nextnode
+flag = True
+while head is not prev:
+    if head.val != prev.val:
+        flag = False
+        break
+    head = head.next
+    prev = prev.next
