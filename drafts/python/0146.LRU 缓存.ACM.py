@@ -30,9 +30,10 @@ for _ in range(q-1):
         if key not in cache:
             print(-1)
         else:
-            print(cache[key])
-            remove(key)
-            addfront(key)
+            node = cache[key]
+            print(node.val)
+            remove(node)
+            addfront(node)
 
     if parts[0] == "put":
         value = parts[2]
@@ -40,9 +41,13 @@ for _ in range(q-1):
         if key in cache:
             node = cache[key]
             node.val = value
-            remove(key)
+            remove(node)
         else:
             node = ListNode(key,value)
             cache[key] = node
             
-        addfront(key)
+        addfront(node)
+        if len(cache) > size:
+            node = tail.prev
+            remove(node)
+            del cache[node.key]
