@@ -15,7 +15,7 @@ def copy(head):
     while cur:
         node = m[cur]
         node.next = m[cur.next]
-        node.random = m[cur.rancom]
+        node.random = m[cur.random]
         cur = cur.next
     return m[head]
 
