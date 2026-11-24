@@ -49,6 +49,6 @@ for _ in range(q-1):
             
         addfront(node)
         if len(cache) > size:
-            node = tail.prev
-            remove(node)
-            del cache[node.key]
+            old =tail.prev
+            remove(old)
+            del cache[old.key]
