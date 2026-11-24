@@ -41,3 +41,4 @@ for i in range(n):
 
 head = head.next
 newhead = copy(head)
+randomindex = {None:-1}
