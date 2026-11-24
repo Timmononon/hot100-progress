@@ -21,3 +21,27 @@ for i in range(n):
 
 if position is not None:
     tail.next = position
+
+head = head.next
+slow = head
+fast = head
+meet = None
+while fast and fast.next:
+    slow = slow.next
+    fast = fast.next.next
+
+    if slow is fast:
+        meet = slow
+        break
+index = 0
+if meet is None:
+    print(-1)
+else:
+    p = head
+    q = meet
+
+    while p is not q:
+        p = p.next
+        q = q.next
+        index +=1
+    print(index)
