@@ -8,3 +8,12 @@ def copy(head):
 
 
 n = int(input())
+head = ListNode()
+tail = head
+nodes = []
+indices = []
+for _ in range(n):
+    value,index = map(int,input().split())
+    node = ListNode(value)
+    tail.next = node
+    tail = node
