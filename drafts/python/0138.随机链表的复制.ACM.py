@@ -42,3 +42,10 @@ for i in range(n):
 head = head.next
 newhead = copy(head)
 randomindex = {None:-1}
+for i in range(n):
+    randomindex[i] = i
+
+cur = head
+while cur:
+    print(cur.val,randomindex[cur.random])
+    cur = cur.next
