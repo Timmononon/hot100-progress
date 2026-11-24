@@ -22,6 +22,7 @@ tail.prev = head
 q = int(input())
 s = input().split()
 size = int(s[1])
+print("null")
 cache = {}
 for _ in range(q-1):
     parts = input().split()
