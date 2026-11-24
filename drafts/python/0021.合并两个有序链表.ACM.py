@@ -1,0 +1,2 @@
+head = Listnode()
+tail = head
