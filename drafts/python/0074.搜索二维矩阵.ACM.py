@@ -5,3 +5,6 @@ for _ in range(m):
     matrix.append(row)
 l = 0
 r = m*n-1
+
+while l<r:
+    mid = (l+r)//2
