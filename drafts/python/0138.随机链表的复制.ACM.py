@@ -5,7 +5,19 @@ class ListNode:
         self.random = random
 
 def copy(head):
+    cur = head
+    m = {None:None}
+    while cur:
+        m[cur] = ListNode(cur.val)
+        cur = cur.next
 
+    cur = head
+    while cur:
+        node = m[cur]
+        node.next = m[cur.next]
+        node.random = m[cur.rancom]
+        cur = cur.next
+    return m[head]
 
 n = int(input())
 head = ListNode()
