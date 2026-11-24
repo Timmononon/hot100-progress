@@ -24,3 +24,5 @@ head = head.next
 for i in range(n):
     node = nodes[i]
     index = indices[i]
+    if index != -1:
+        node.random = nodes[index]
