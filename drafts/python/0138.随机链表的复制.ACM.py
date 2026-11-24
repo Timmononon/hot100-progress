@@ -42,8 +42,10 @@ for i in range(n):
 head = head.next
 newhead = copy(head)
 randomindex = {None:-1}
+cur = newhead
 for i in range(n):
-    randomindex[nodes[i]] = i
+    randomindex[cur] = i
+    cur = cur.next
 
 cur = newhead
 while cur:
