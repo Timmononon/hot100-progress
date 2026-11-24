@@ -26,5 +26,6 @@ for i in range(n):
     index = indices[i]
     if index != -1:
         node.random = nodes[index]
+
 head = head.next
 newhead = copy(head)
