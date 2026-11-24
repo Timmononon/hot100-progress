@@ -5,9 +5,8 @@ class ListNode:
         self.next = next
         self.prev = prev
 def remove(node):
-    
-    node.prev.next = node.next
     node.next.prev = node.prev
+    node.prev.next = node.next
 
 def addfront(node):
     node.prev = head
