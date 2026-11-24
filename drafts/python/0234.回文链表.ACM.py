@@ -16,24 +16,12 @@ head = head.next
 
 fast = head
 slow = head
-
-while fast is not None and fast.next is not None:
+while fast and fast.next:
     slow = slow.next
     fast = fast.next.next
-
 prev = None
 while slow:
     nextnode = slow.next
     slow.next = prev
     prev = slow
     slow = nextnode
-
-while head is not prev:
-    if head.val != prev.val:
-        print(False)
-        break
-    head = head.next
-    prev = prev.next
-    
-if head is prev:
-    print(True)
