@@ -20,9 +20,11 @@ for _ in range(n):
 
     nodes.append(node)
     indices.append(index)
-head = head.next
+
 for i in range(n):
     node = nodes[i]
     index = indices[i]
     if index != -1:
         node.random = nodes[index]
+head = head.next
+newhead = copy(head)
