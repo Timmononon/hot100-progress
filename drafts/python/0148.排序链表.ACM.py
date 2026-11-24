@@ -19,14 +19,14 @@ def merge_sort(node):
 
     head = ListNode()
     tail = head
-
     while left and right:
         if left.val <= right.val:
             tail.next = left
-            left+=1
+            left = left.next
         else:
             tail.next = right
-            right+=1
+            right = right.next
+        tail = tail.next
     if left:
         tail.next = left
     else:
@@ -49,4 +49,5 @@ res = []
 while head is not None:
     res.append(head.val)
     head = head.next
+print(len(res))
 print(*res)
