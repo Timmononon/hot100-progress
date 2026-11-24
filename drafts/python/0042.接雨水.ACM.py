@@ -6,7 +6,7 @@ def quick_sort(q,l,r):
         return
     i = l-1
     j = r+1
-    x = (i+j)//2
+    x = q[l]
 
     while i<j:
         i+=1
