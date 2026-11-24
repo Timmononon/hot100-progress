@@ -3,7 +3,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-
+def merge_sort(node):
 
 n = int(input())
 nums = list(map(int , input().split()))
@@ -16,3 +16,9 @@ for x in nums:
     tail = node
 
 head = head.next
+head = merge_sort(head)
+res = []
+while head is not None:
+    res.append(head.val)
+    head = head.next
+print(*res)
