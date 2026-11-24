@@ -3,3 +3,8 @@ class ListNode:
         self.val =val
         self.next = next
         self.random = random
+
+def copy(head):
+
+
+n = int(input())
