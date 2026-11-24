@@ -32,3 +32,5 @@ while head is not prev:
         break
     head = head.next
     prev = prev.next
+
+print(flag)
