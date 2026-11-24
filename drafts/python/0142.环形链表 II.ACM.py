@@ -6,3 +6,4 @@ class ListNode:
 
 n = int(input())
 nums = list(map(int,input().split()))
+pos = int(input())
