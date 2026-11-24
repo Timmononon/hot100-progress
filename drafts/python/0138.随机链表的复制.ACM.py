@@ -17,3 +17,7 @@ for _ in range(n):
     node = ListNode(value)
     tail.next = node
     tail = node
+
+    nodes.append(node)
+    indices.append(index)
+head = head.next
