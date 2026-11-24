@@ -11,3 +11,7 @@ pos = int(input())
 head = ListNode()
 tail = head
 for i in range(n):
+    num = nums[i]
+    node = ListNode(num)
+    tail.next = node
+    tail = node
