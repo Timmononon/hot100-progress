@@ -28,8 +28,21 @@ for _ in range(q-1):
     key = int(parts[1])
     if parts[0] == "get":
         if key not in cache:
-            print("null")
+            print(-1)
         else:
             print(cache[key])
             remove(key)
             addfront(key)
+
+    if parts[0] == "put":
+        value = parts[2]
+        print("null")
+        if key in cache:
+            node = cache[key]
+            node.val = value
+            remove(key)
+        else:
+            node = ListNode(key,value)
+            cache[key] = node
+            
+        addfront(key)
