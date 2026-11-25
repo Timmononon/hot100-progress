@@ -30,3 +30,5 @@ if rootvalue != "null":
             rightnode = TreeNode(int(rightvalue))
             queue.append(rightnode)
             node.right = rightnode
+
+dfs
