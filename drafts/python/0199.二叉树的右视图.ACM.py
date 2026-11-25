@@ -4,3 +4,6 @@ class TreeNode:
         self.left = left
         self.right = right
 n = int(input())
+nums = input().split()
+tokens = iter(nums)
+rootvalue = next(tokens)
