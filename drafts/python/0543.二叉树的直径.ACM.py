@@ -3,3 +3,7 @@ def fun(node):
         return 0,0
     ldepth,lwidth = fun(node.left)
     rdepth,rwidth = fun(node.right)
+
+    depth = max(ldepth,rdepth)+1
+    width = max(lwidth,rwidth,ldepth+rdepth)
+    return depth,width
