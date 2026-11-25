@@ -14,5 +14,27 @@ if rootvalue !="null":
     root = TreeNode(int(rootvalue))
     queue.append(root)
 
-    leftvalue = next(tokens,"null")
-    rightvalue = next(tokens,"null")
+    while queue:
+        node = queue.popleft()
+        leftvalue = next(tokens,"null")
+        rightvalue = next(tokens,"null")
+        
+        if leftvalue !="null":
+            leftnode = TreeNode(int(leftvalue))
+            node.left = leftnode
+            queue.append(leftnode)
+        if rightvalue !="null":
+            rightnode = TreeNode(int(rightvalue))
+            node.right = rightnode
+            queue.append(rightnode)
+
+queue = deque()
+if root:
+    queue.append(root)
+
+while queue:
+
+    size = len(queue)
+
+    for i in range(size):
+        node = queue.popleft()
