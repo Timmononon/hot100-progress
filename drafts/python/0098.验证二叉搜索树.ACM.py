@@ -5,13 +5,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def check(node,low,high):
-    if node is None:
-        return True
-    if node.val < low or node.val > high:
-        return False
-    return check(node.left,low,node.val) and check(node.right,node.val,high)
-
 n = int(input())
 nums = input().split()
 tokens = iter(nums)
@@ -37,5 +30,3 @@ if rootvalue != "null":
             rightnode = TreeNode(int(rightvalue))
             queue.append(rightnode)
             node.right = rightnode
-
-print(check(root,float("-inf"),float("inf")))
