@@ -29,6 +29,7 @@ if rootvalue !="null":
             queue.append(rightnode)
 
 queue = deque()
+res = []
 if root:
     queue.append(root)
 
@@ -39,3 +40,12 @@ while queue:
     for i in range(size):
         node = queue.popleft()
         if i == size-1:
+            res.append(node.val)
+
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+
+print(len(res))
+print(*res)
