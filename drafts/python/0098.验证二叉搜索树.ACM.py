@@ -31,4 +31,4 @@ if rootvalue != "null":
             queue.append(rightnode)
             node.right = rightnode
 
-dfs
+def check(node,low,high):
