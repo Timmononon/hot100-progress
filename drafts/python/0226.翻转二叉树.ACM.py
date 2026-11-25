@@ -4,6 +4,13 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+def rev(node):
+    if node is None:
+        return
+    node.left ,node.right = node.right,node.left
+    rev(node.left)
+    rev(node.right)
+
 
 n = int(input())
 nums = input().split()
@@ -31,3 +38,21 @@ if(rootvalue != "null"):
             rightnode = TreeNode(int(rightvalue))
             queue.append(rightnode)
             node.right = rightnode
+
+rev(root)
+res = []
+queue = deque()
+queue.append(root)
+while queue:
+    node = queue.popleft()
+    if node is None:
+        res.append("null")
+    else:
+        res.append(node.val)
+        queue.append(node.left)
+        queue.append(node.right)
+
+while res and res[-1] == "null":
+    res.pop()
+print(len(res))
+print(*res)
