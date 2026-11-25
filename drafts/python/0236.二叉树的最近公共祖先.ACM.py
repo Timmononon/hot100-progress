@@ -4,3 +4,9 @@ def check(node):
 
     left = check(node.left)
     right = check(node.right)
+
+    if left and right:
+        return node
+    if left:
+        return left
+    return right
