@@ -2,7 +2,7 @@ s = input()
 n = len(s)
 end = 0
 start = 0
-last = []
+last = {}
 res = []
 for i in range(n):
     last[s[i]] = i
