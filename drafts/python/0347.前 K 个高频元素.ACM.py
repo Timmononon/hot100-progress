@@ -14,7 +14,8 @@ for key,value in counts.items():
         heapq.heappop(heap)
 
 res= []
-for key,value in counts.items():
+while heap:
+    key,value = heapq.heappop(heap)
     res.append(value)
 print(len(res))
 print(*res)
