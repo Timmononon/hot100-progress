@@ -4,7 +4,7 @@ nums = list(map(int,input().split()))
 res = []
 path = []
 def dfs(start):
-    res.append(path)
+    res.append(path[:])
 
     for i in range(start,n):
         path.append(nums[i])
